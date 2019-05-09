@@ -149,7 +149,7 @@ class TextCompositionLayer: CompositionLayer {
         textLayer.string = renderedAttributedString
         textLayer.isWrapped = isTextWrapped
 
-        if let paragaphStyle = renderedAttributedString.attributes(at: 0, effectiveRange: nil)[NSAttributedString.Key.paragraphStyle] as? NSParagraphStyle {
+        if renderedAttributedString.string.count > 0, let paragaphStyle = renderedAttributedString.attributes(at: 0, effectiveRange: nil)[NSAttributedString.Key.paragraphStyle] as? NSParagraphStyle {
             switch paragaphStyle.alignment {
             case .left:
                 textLayer.anchorPoint = CGPoint(x: 0, y: 1)
