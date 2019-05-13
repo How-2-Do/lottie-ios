@@ -39,6 +39,7 @@ class TextCompositionLayer: CompositionLayer {
         super.init(layer: textLayer, size: .zero)
         contentsLayer.addSublayer(self.textLayer)
         self.textLayer.masksToBounds = false
+        self.textLayer.contentsScale = UIScreen.main.scale
         self.childKeypaths.append(textNodeProperties)
         print(self.childKeypaths)
     }
