@@ -140,7 +140,7 @@ class TextCompositionLayer: CompositionLayer {
         let size = CTFramesetterSuggestFrameSizeWithConstraints(framesetter,
                                                                 CFRange(location: 0,length: 0),
                                                                 nil,
-                                                                CGSize(width: compositionSize.width,
+                                                                CGSize(width: bounds.width,
                                                                        height: CGFloat.greatestFiniteMagnitude),
                                                                 nil)
 
