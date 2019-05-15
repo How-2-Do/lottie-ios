@@ -125,6 +125,8 @@ class TextCompositionLayer: CompositionLayer {
 
     private func updateContentsWithFrame(frame: CGFloat, attributedString: NSAttributedString, defaultAttributes: [NSAttributedString.Key : Any]? = nil) {
 
+        guard attributedString.string.count > 0 else { return }
+
         var attributes = attributedString.attributes(at: 0, effectiveRange: nil)
         if let defaultAttributes = defaultAttributes {
             attributes.merge(defaultAttributes){(current, _) in current}
