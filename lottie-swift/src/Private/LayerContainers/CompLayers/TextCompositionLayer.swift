@@ -41,7 +41,6 @@ class TextCompositionLayer: CompositionLayer {
         self.textLayer.masksToBounds = false
         self.textLayer.contentsScale = UIScreen.main.scale
         self.childKeypaths.append(textNodeProperties)
-        print(self.childKeypaths)
     }
 
     required init?(coder aDecoder: NSCoder) {
