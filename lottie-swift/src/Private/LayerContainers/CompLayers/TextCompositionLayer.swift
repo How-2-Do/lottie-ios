@@ -151,6 +151,7 @@ class TextCompositionLayer: CompositionLayer {
         textLayer.transform = matrix
         textLayer.string = renderedAttributedString
         textLayer.isWrapped = isTextWrapped
+        textLayer.alignmentMode = .center
 
         if renderedAttributedString.string.count > 0, let paragaphStyle = renderedAttributedString.attributes(at: 0, effectiveRange: nil)[NSAttributedString.Key.paragraphStyle] as? NSParagraphStyle {
             switch paragaphStyle.alignment {
